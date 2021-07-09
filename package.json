@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Oh My Food Projet 3",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Christelle Bono",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
