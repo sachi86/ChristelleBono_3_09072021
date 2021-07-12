@@ -1,0 +1,3 @@
+@mixin button_hover {
+    background: lighten($color_primary, 30%), lighten($color_secondary, 30%);
+}
