@@ -1,3 +1,6 @@
 @mixin button_hover {
-    background: lighten($color_primary, 30%), lighten($color_secondary, 30%);
+background: linear-gradient(to top left, lighten($color-primary,7%), lighten($color-secondary,7%));
 }
+@mixin explain_hover {
+    background: background: darken($color-background, 6%);
+    }

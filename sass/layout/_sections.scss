@@ -1,6 +1,8 @@
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    margin: 0 5% 0 5%;
 }
 .search {
     display: flex;
@@ -43,11 +45,71 @@ main {
         background: $color-background;
         &_title {
             margin: 40px 50px 20px 50px;
-            font-size:5vh;
+            font-size:6vh;
         }
         &_paragraph {
-            font-size: 3.7vh;
+            font-size: 3.75vh;
             margin-bottom: 30px;
+        }
+    }
+}
+.fonctionnement {
+    width: 90%;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    &_title {
+        display:flex;
+        margin: 50px 0 30px 0;
+    }
+    &_explain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+    }
+    
+.explain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &_numero {
+        display: flex;
+        padding:3px 7px 3px 7px;
+        background-color: $color-primary;
+        border-radius: $border-radius;
+        font-size: 0.8rem;
+        color: white;
+        margin-bottom: 20px;
+        margin-right: -10px;
+        z-index: 1000;
+    }
+    &_card {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        height: 75px;
+        width: 95%;
+        background-color: $color-background;
+        border-radius: $border-radius;
+        margin-bottom: 20px;
+        box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;
+        user-select: none;
+        cursor: pointer;
+        z-index: 1;
+        &_icon {
+            display: flex;
+            margin: 0 20px 0 30px;
+            color: #6F6F6F;
+        } 
+        &:hover {
+            box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow;
+            @include explain_hover;
+        } 
+        &:hover  &_icon {
+            color: $color-primary;
         }
     }
 }
