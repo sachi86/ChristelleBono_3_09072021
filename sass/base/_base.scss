@@ -20,3 +20,9 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
 }
+a {
+    text-decoration: none;
+    &:visited {
+        color: black;
+    }
+}
