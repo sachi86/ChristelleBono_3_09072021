@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    background-color:#353535;
+    padding: 25px 0 35px 25px;
+    color: white;
+    &_logo {
+        width: 105px;
+        filter: invert(1);
+        -webkit-filter: invert(1);
+        margin-bottom: 20px;
+    }
+    &_list {
+        list-style: none;
+        &_composant {
+            color: white;
+            padding-bottom: 5px;
+            &_icon {
+                font-size: 0.7rem;
+                margin-right:0.7rem;
+            }
+        }
+    }
+}
