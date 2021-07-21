@@ -119,6 +119,7 @@ main {
     align-items: center;
     width: 100%;
     background: $color-background;
+    color: black;
     &_title {
         margin: 50px 0 20px 20px;
         align-self: flex-start;
@@ -138,6 +139,9 @@ main {
         background-color: white;
         border-radius: $border-radius;
         box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;
+        & a {
+            color: black;
+        }
         &_image {
             display: flex;
             width: 100%;

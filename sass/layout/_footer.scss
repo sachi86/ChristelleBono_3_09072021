@@ -5,7 +5,6 @@
     width: 100%;
     background-color:#353535;
     padding: 25px 0 35px 25px;
-    color: white;
     &_logo {
         width: 105px;
         filter: invert(1);
@@ -23,4 +22,7 @@
             }
         }
     }
+}
+footer a {
+    color: white;
 }

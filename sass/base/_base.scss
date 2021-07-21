@@ -20,9 +20,16 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
 }
+
 a {
     text-decoration: none;
     &:visited {
-        color: black;
+        color:inherit;
+    }
+    &:active {
+        color: inherit;
+    }
+    &:focus {
+        color: inherit;
     }
 }
