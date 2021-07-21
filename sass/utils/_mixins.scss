@@ -4,3 +4,6 @@ background: linear-gradient(to top left, lighten($color-primary,7%), lighten($co
 @mixin explain_hover {
     background: darken($color-background, 6%);
     }
+@mixin color_new {
+    color: darken($color-tertiary, 40%);
+}
