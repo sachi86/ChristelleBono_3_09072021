@@ -10,6 +10,6 @@
     box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;
     &:hover {
         @include button_hover;
-        box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow;
+        box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow-hover;
     }
 }

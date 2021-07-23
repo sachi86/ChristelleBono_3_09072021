@@ -7,3 +7,6 @@ background: linear-gradient(to top left, lighten($color-primary,7%), lighten($co
 @mixin color_new {
     color: darken($color-tertiary, 40%);
 }
+@mixin checkbox {
+    background: darken($color-tertiary, 20%);
+}

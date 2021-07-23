@@ -1,12 +1,12 @@
 
 .progress_food_image {
         width: 100%;
-        height: 220px;
+        height: 300px;
         background-size: cover;
         background-position:center;
         background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
         animation: progress-image 1000ms;
-        z-index:200;
+        z-index:-200;
 }
 .restaurants_head {
     display: flex;
@@ -32,7 +32,7 @@
     justify-content: center;
     width: 100%;
     background-color: $color-background;
-    padding: 5%;
+    padding: 4%;
     &_form {
         display:flex;
         flex-direction: column;
@@ -52,20 +52,96 @@
         }
         &_container {
             display: flex;
-            flex-flow:column wrap;
+            align-items: center;
             width:100%;
             height:20%;
             background-color: white;
-            border-radius: $border-radius;
+            border-radius: $border-radius-menu;
             box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;   
             margin:10px 0 10px 0;
+            &_checkbox{
+                opacity:0;
+                margin-right: -10px;
+                &:checked + label > .menu_dish_option_check {
+                    @include checkbox;
+                    transform: scale(1);
+                }
+                &:checked + label {
+                    box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow-hover; 
+                }
+            }
         }
         &_option {
             display: flex;
-            flex-flow:column wrap;
-            width:100%;
-            height:20%;
-            padding: 10px;
+            justify-content: space-between;
+            border-radius: $border-radius-menu;
+            width: 100%;
+            height: 66px;
+            cursor: pointer;
+            user-select: none;
+            &:hover {
+                box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow-hover;
+            }
+            &:hover &_check {
+                transform: scaleX(1);
+
+            }
+            &:hover &_aside {
+                animation: slide-left 500ms both;
+            }
+            &:hover &_check_icon {
+                animation:rotate-icon 500ms ease;
+            }
+            &_check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 25%;
+                height: 100%;
+                color: white;
+                border-radius: 0 $border-radius-menu $border-radius-menu 0;
+                background:$color-tertiary;
+                transform-origin: 100% 0%;
+                transform: scaleX(0);
+                transition: transform 500ms cubic-bezier(.32,0,.07,1);
+                &_icon {
+                    font-size: 1.3rem;
+                }
+            }
+            &_description {
+                width: 80%;
+                line-height: 1.5rem;
+                padding: 10px 0 10px 10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                &_title {
+                    font-size: 1.1rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                &_p {
+                    font-size: 0.95rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+            &_aside {
+                font-size: 1rem;
+                width: 20%;
+                align-self: flex-end;
+                justify-content: flex-end;
+                padding-left: 9%;
+                font-weight: bolder;
+                margin-bottom: 10px;
+                margin-right: -60px;
+            }
+        }
+        &_button {
+            align-self: center;
+            margin: 2.5rem;
         }
     }
 }
