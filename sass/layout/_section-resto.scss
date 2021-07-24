@@ -1,12 +1,16 @@
 
-.progress_food_image {
+.food_image {
         width: 100%;
         height: 300px;
         background-size: cover;
         background-position:center;
-        background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
-        // animation: progress-image 600ms ease-in-out;
         z-index:-200;
+        &_palette {
+            background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
+        }
+        &_note {
+            background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_note_enchantée.jpg);
+        }
 }
 .anim-menu {
     width: 100%;
