@@ -314,32 +314,24 @@ main {
     background-size: 100% 100%;
   }
 }
-@-webkit-keyframes progress-image {
-  0% {
-    transform-origin: 50% 0%;
-    transform: scale(-1) rotate(180deg);
-  }
-  50% {
-    border-radius: 70%;
-    transform: scale(0) rotate(180deg);
-  }
-  100% {
-    transform-origin: 50% 50%;
-    transform: scale(1);
-  }
-}
 @keyframes progress-image {
   0% {
-    transform-origin: 50% 0%;
-    transform: scale(-1) rotate(180deg);
-  }
-  50% {
-    border-radius: 70%;
-    transform: scale(0) rotate(180deg);
+    transform-origin: 50% top;
+    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    transform-origin: 50% 50%;
     transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes progress-image {
+  0% {
+    transform-origin: 50% top;
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 @-webkit-keyframes slide-right {
@@ -388,6 +380,62 @@ main {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes anim-menu-box {
+  0% {
+    transform-origin: 100% top;
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes anim-menu-box {
+  0% {
+    transform-origin: 100% top;
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes anim-menu {
+  0% {
+    opacity: 0;
+    margin-top: -300px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    margin-top: -300px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
 .btn {
@@ -442,9 +490,13 @@ footer a {
   background-size: cover;
   background-position: center;
   background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
-  -webkit-animation: progress-image 1000ms;
-          animation: progress-image 1000ms;
   z-index: -200;
+}
+
+.anim-menu {
+  width: 100%;
+  -webkit-animation: anim-menu 700ms ease-in-out;
+          animation: anim-menu 700ms ease-in-out;
 }
 
 .restaurants_head {
@@ -501,6 +553,20 @@ footer a {
   border-radius: 15px;
   box-shadow: 5px 5px 5px #dadada;
   margin: 10px 0 10px 0;
+  -webkit-animation: anim-menu-box 1000ms ease-in-out;
+          animation: anim-menu-box 1000ms ease-in-out;
+}
+.menu_dish_container_1 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.menu_dish_container_2 {
+  -webkit-animation-delay: 550ms;
+          animation-delay: 550ms;
+}
+.menu_dish_container_3 {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
 }
 .menu_dish_container_checkbox {
   opacity: 0;
@@ -512,6 +578,9 @@ footer a {
 }
 .menu_dish_container_checkbox:checked + label {
   box-shadow: 7px 7px 7px #c5c4c4;
+}
+.menu_dish_container_checkbox:checked + label > .menu_dish_option_aside {
+  margin-right: 20px;
 }
 .menu_dish_option {
   display: flex;
@@ -543,7 +612,7 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 24%;
   height: 100%;
   color: white;
   border-radius: 0 15px 15px 0;

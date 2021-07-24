@@ -16,17 +16,23 @@
   }
   @keyframes progress-image {
     0% {
-      transform-origin: 50% 0%;
-      transform:scale(-1) rotate(180deg);
+      transform-origin: 50% top;
+      transform:scale(0);
+      opacity: 0;
       
     }
-    50% {
-      border-radius: 70%;
-      transform:scale(0) rotate(180deg);
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes progress-image {
+    0% {
+      transform-origin: 50% top;
+      transform:scaleY(0); 
     }
     100% {
-      transform-origin: 50% 50%;
-      transform: scale(1);
+      transform: scaleY(1);
     }
   }
 @keyframes slide-right {
@@ -51,5 +57,33 @@
   }
   100% {
     transform:rotate(360deg);
+  }
+}
+@keyframes anim-menu-box {
+  0% {
+    transform-origin: 100% top;
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    transform:scaleY(1);
+  }
+}
+@keyframes anim-menu{
+  0% {
+    opacity: 0;
+    margin-top:-300px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    margin-top:0;
   }
 }

@@ -5,8 +5,12 @@
         background-size: cover;
         background-position:center;
         background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
-        animation: progress-image 1000ms;
+        // animation: progress-image 600ms ease-in-out;
         z-index:-200;
+}
+.anim-menu {
+    width: 100%;
+    animation:anim-menu 700ms ease-in-out;
 }
 .restaurants_head {
     display: flex;
@@ -59,8 +63,18 @@
             border-radius: $border-radius-menu;
             box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;   
             margin:10px 0 10px 0;
+            animation: anim-menu-box  1000ms ease-in-out;
+            &_1 {
+                animation-delay: 400ms;
+            }
+            &_2 {
+                animation-delay: 550ms;
+            }
+            &_3 {
+                animation-delay: 700ms;
+            }
             &_checkbox{
-                opacity:0;
+                opacity: 0;
                 margin-right: -10px;
                 &:checked + label > .menu_dish_option_check {
                     @include checkbox;
@@ -68,6 +82,9 @@
                 }
                 &:checked + label {
                     box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow-hover; 
+                }
+                &:checked + label > .menu_dish_option_aside {
+                    margin-right: 20px;
                 }
             }
         }
@@ -96,7 +113,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 25%;
+                width: 24%;
                 height: 100%;
                 color: white;
                 border-radius: 0 $border-radius-menu $border-radius-menu 0;
