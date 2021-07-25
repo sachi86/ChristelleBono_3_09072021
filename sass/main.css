@@ -553,6 +553,10 @@ footer a {
   -webkit-animation-delay: 700ms;
           animation-delay: 700ms;
 }
+.menu_dish_container_4 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
 .menu_dish_container_checkbox {
   opacity: 0;
   margin-right: -10px;
