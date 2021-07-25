@@ -42,27 +42,18 @@
   0% {
     transform-origin: 100% top;
     opacity: 0;
-    transform: scaleY(0);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scaleY(1);
+    transform: translateY(1rem);
   }
   100% {
     opacity: 1;
-    transform:scaleY(1);
+    transform:translateY(0);
   }
 }
 @keyframes anim-menu{
   0% {
-    opacity: 0;
     margin-top:-300px;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
-    opacity: 1;
     margin-top:0;
   }
 }

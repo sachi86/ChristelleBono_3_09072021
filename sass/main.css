@@ -366,55 +366,37 @@ main {
   0% {
     transform-origin: 100% top;
     opacity: 0;
-    transform: scaleY(0);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scaleY(1);
+    transform: translateY(1rem);
   }
   100% {
     opacity: 1;
-    transform: scaleY(1);
+    transform: translateY(0);
   }
 }
 @keyframes anim-menu-box {
   0% {
     transform-origin: 100% top;
     opacity: 0;
-    transform: scaleY(0);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scaleY(1);
+    transform: translateY(1rem);
   }
   100% {
     opacity: 1;
-    transform: scaleY(1);
+    transform: translateY(0);
   }
 }
 @-webkit-keyframes anim-menu {
   0% {
-    opacity: 0;
     margin-top: -300px;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
-    opacity: 1;
     margin-top: 0;
   }
 }
 @keyframes anim-menu {
   0% {
-    opacity: 0;
     margin-top: -300px;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
-    opacity: 1;
     margin-top: 0;
   }
 }
@@ -480,8 +462,8 @@ footer a {
 
 .anim-menu {
   width: 100%;
-  -webkit-animation: anim-menu 700ms ease-in-out;
-          animation: anim-menu 700ms ease-in-out;
+  -webkit-animation: anim-menu 1000ms ease-in-out;
+          animation: anim-menu 1000ms ease-in-out;
 }
 
 .restaurants_head {
@@ -538,24 +520,24 @@ footer a {
   border-radius: 15px;
   box-shadow: 5px 5px 5px #dadada;
   margin: 10px 0 10px 0;
-  -webkit-animation: anim-menu-box 1000ms ease-in-out;
-          animation: anim-menu-box 1000ms ease-in-out;
+  -webkit-animation: anim-menu-box 1000ms both;
+          animation: anim-menu-box 1000ms both;
 }
 .menu_dish_container_1 {
   -webkit-animation-delay: 400ms;
           animation-delay: 400ms;
 }
 .menu_dish_container_2 {
-  -webkit-animation-delay: 550ms;
-          animation-delay: 550ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 .menu_dish_container_3 {
-  -webkit-animation-delay: 700ms;
-          animation-delay: 700ms;
-}
-.menu_dish_container_4 {
   -webkit-animation-delay: 800ms;
           animation-delay: 800ms;
+}
+.menu_dish_container_4 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 .menu_dish_container_checkbox {
   opacity: 0;

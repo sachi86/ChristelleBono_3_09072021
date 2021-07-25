@@ -14,7 +14,7 @@
 }
 .anim-menu {
     width: 100%;
-    animation:anim-menu 700ms ease-in-out;
+    animation:anim-menu 1000ms ease-in-out;
 }
 .restaurants_head {
     display: flex;
@@ -67,18 +67,18 @@
             border-radius: $border-radius-menu;
             box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;   
             margin:10px 0 10px 0;
-            animation: anim-menu-box  1000ms ease-in-out;
+            animation: anim-menu-box  1000ms both;
             &_1 {
                 animation-delay: 400ms;
             }
             &_2 {
-                animation-delay: 550ms;
+                animation-delay: 600ms;
             }
             &_3 {
-                animation-delay: 700ms;
+                animation-delay: 800ms;
             }
             &_4 {
-                animation-delay: 800ms;
+                animation-delay: 1000ms;
             }
             &_checkbox{
                 opacity: 0;
