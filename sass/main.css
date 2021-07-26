@@ -244,12 +244,22 @@ main {
   color: #278870;
   background-color: #99E2D0;
 }
+@media only screen and (min-width: 540px) and (max-width: 1024px) {
+  .restaurants_card_image_new {
+    background-position: center;
+  }
+}
 .restaurants_card_image_1 {
   background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
 }
 .restaurants_card_image_2 {
   background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_note_enchantée.jpg);
   background-position: bottom -95px center;
+}
+@media only screen and (min-width: 540px) and (max-width: 1024px) {
+  .restaurants_card_image_2 {
+    background-position: center;
+  }
 }
 .restaurants_card_image_3 {
   background-image: url(/ChristelleBono_3_09072021/medias/restaurants/a_la_française.jpg);
@@ -624,6 +634,11 @@ footer a {
   font-weight: bolder;
   margin-bottom: 10px;
   margin-right: -60px;
+}
+@media only screen and (min-width: 540px) and (max-width: 1024px) {
+  .menu_dish_option_aside {
+    margin-right: -30%;
+  }
 }
 .menu_dish_button {
   align-self: center;
