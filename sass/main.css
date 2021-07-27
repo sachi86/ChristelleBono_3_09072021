@@ -444,6 +444,154 @@ main {
     margin-top: 0;
   }
 }
+@-webkit-keyframes stove {
+  0% {
+    transform: translate(200px, 1vh);
+  }
+  25% {
+    transform: translate(7vh, 4vh);
+  }
+  50% {
+    transform: translate(-100px, -20vh);
+  }
+  100% {
+    transform: translate(100px, 1vh);
+  }
+}
+@keyframes stove {
+  0% {
+    transform: translate(200px, 1vh);
+  }
+  25% {
+    transform: translate(7vh, 4vh);
+  }
+  50% {
+    transform: translate(-100px, -20vh);
+  }
+  100% {
+    transform: translate(100px, 1vh);
+  }
+}
+@-webkit-keyframes stove-mobile {
+  0% {
+    transform: translate(4vh, 2vh);
+  }
+  50% {
+    transform: translate(-100px, -20vh);
+  }
+  100% {
+    transform: translate(50px, 1vh);
+  }
+}
+@keyframes stove-mobile {
+  0% {
+    transform: translate(4vh, 2vh);
+  }
+  50% {
+    transform: translate(-100px, -20vh);
+  }
+  100% {
+    transform: translate(50px, 1vh);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes food {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 0 #FF79DA;
+  }
+  50% {
+    transform: scale(1);
+    text-shadow: 0 0 0 #99E2D0;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 #9356DC;
+  }
+}
+@keyframes food {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 0 #FF79DA;
+  }
+  50% {
+    transform: scale(1);
+    text-shadow: 0 0 0 #99E2D0;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 #9356DC;
+  }
+}
+@-webkit-keyframes letters {
+  0% {
+    transform: translateY(0) scale(1.3);
+    color: #9356DC;
+    text-shadow: 0 0 16px #ffd6d6, 0 0 32px #FF79DA;
+  }
+  25% {
+    transform: translateY(-15px) scale(1.2);
+    color: #FF79DA;
+    text-shadow: none;
+  }
+  50% {
+    transform: translateY(-15px) scale(1);
+    color: black;
+    text-shadow: 0 0 16px #f95600, 0 0 32px #FF79DA, 0 0 90px #FF79DA;
+  }
+  75% {
+    transform: translateY(0) scale(1.5);
+    color: #9356DC;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-15px) scale(0.5);
+    color: black;
+    text-shadow: 0 0 16px #f95600, 0 0 32px #FF79DA, 0 0 124px #FF79DA;
+  }
+}
+@keyframes letters {
+  0% {
+    transform: translateY(0) scale(1.3);
+    color: #9356DC;
+    text-shadow: 0 0 16px #ffd6d6, 0 0 32px #FF79DA;
+  }
+  25% {
+    transform: translateY(-15px) scale(1.2);
+    color: #FF79DA;
+    text-shadow: none;
+  }
+  50% {
+    transform: translateY(-15px) scale(1);
+    color: black;
+    text-shadow: 0 0 16px #f95600, 0 0 32px #FF79DA, 0 0 90px #FF79DA;
+  }
+  75% {
+    transform: translateY(0) scale(1.5);
+    color: #9356DC;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-15px) scale(0.5);
+    color: black;
+    text-shadow: 0 0 16px #f95600, 0 0 32px #FF79DA, 0 0 124px #FF79DA;
+  }
+}
 .btn {
   width: 220px;
   height: 50px;
@@ -709,4 +857,172 @@ main {
 .menu_dish_button {
   align-self: center;
   margin: 2.5rem;
+}
+
+.load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.load_stove {
+  display: flex;
+  width: 100%;
+}
+.load_stove_poele {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.load_stove_food {
+  width: 35%;
+  z-index: -200;
+  align-self: center;
+  -webkit-animation: rotate 1s ease-in infinite;
+          animation: rotate 1s ease-in infinite;
+}
+.load_stove_food_rotate_1 {
+  margin: 10px;
+}
+.load_stove_food_rotate_2 {
+  margin: -10px;
+}
+.load_stove_food_emoji {
+  transform: scale(0);
+  color: transparent;
+  font-size: 30px;
+  text-shadow: 0 0 0 #9356DC;
+  line-height: 1;
+  z-index: 200;
+  -webkit-animation: food 1000ms infinite;
+          animation: food 1000ms infinite;
+}
+@media only screen and (max-width: 767px) {
+  .load_stove_food_emoji {
+    font-size: 15px;
+  }
+}
+.load_stove_cuve {
+  width: 240px;
+  height: 90px;
+  background: linear-gradient(#99E2D0, #9356DC, #FF79DA);
+  border-radius: 0 0 70px 70px;
+  -webkit-animation: stove 1000ms infinite;
+          animation: stove 1000ms infinite;
+  z-index: 400;
+}
+@media only screen and (max-width: 767px) {
+  .load_stove_cuve {
+    width: 90px;
+    height: 40px;
+    border-radius: 0 0 20px 20px;
+    -webkit-animation: stove-mobile 1000ms infinite;
+            animation: stove-mobile 1000ms infinite;
+  }
+}
+.load_stove_handle {
+  width: 160px;
+  height: 20px;
+  background: linear-gradient(#99E2D0, #9356DC, #FF79DA);
+  border-radius: 0 10px 30px 0;
+  -webkit-animation: stove 1000ms infinite;
+          animation: stove 1000ms infinite;
+}
+@media only screen and (max-width: 767px) {
+  .load_stove_handle {
+    width: 40px;
+    height: 10px;
+    -webkit-animation: stove-mobile 1000ms infinite;
+            animation: stove-mobile 1000ms infinite;
+  }
+}
+.load_letters {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  z-index: 500;
+}
+.load_letters_letter {
+  font-family: "Shrikhand", cursive;
+  color: #9356DC;
+  font-size: 60px;
+  -webkit-animation: letters 3000ms linear infinite 3s;
+          animation: letters 3000ms linear infinite 3s;
+}
+@media only screen and (max-width: 767px) {
+  .load_letters_letter {
+    font-size: 40px;
+  }
+}
+
+.load_stove_food_emoji:nth-child(1) {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+.load_stove_food_emoji:nth-child(2) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.load_stove_food_emoji:nth-child(3) {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.load_stove_food_rotate_1 {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+.load_stove_food_rotate_2 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.load_stove_food_rotate_3 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.load_letters_letter:nth-child(1) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.load_letters_letter:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.load_letters_letter:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.load_letters_letter:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.load_letters_letter:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.load_letters_letter:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.load_letters_letter:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.load_letters_letter:nth-child(8) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }/*# sourceMappingURL=main.css.map */
