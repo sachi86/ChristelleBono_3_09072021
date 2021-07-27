@@ -28,7 +28,7 @@ main {
             text-align: center;
             font-weight: bold;
             border: transparent;
-            font-size: 3vh;
+            font-size: 0.95rem;
         }
         &_icon {
             color: #6F6F6F;
@@ -45,10 +45,10 @@ main {
         background: $color-background;
         &_title {
             margin: 40px 50px 20px 50px;
-            font-size:6vh;
+            font-size:1.5rem;
         }
         &_paragraph {
-            font-size: 3.75vh;
+            font-size: 1.1rem;
             margin-bottom: 30px;
         }
     }
@@ -58,8 +58,19 @@ main {
     height: 440px;
     display: flex;
     flex-direction: column;
+    @media only screen and (min-width:1023px) {
+        height: 250px;
+    }
     &_title {
         margin: 50px 0 30px 0;
+    }
+    &_explains {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @media only screen and (min-width:1023px) {
+            flex-direction: row;
+        }
     }
  }  
 .explain {
@@ -122,6 +133,11 @@ main {
         flex-direction: column;
         width: 90%;
         height: 100%;
+        @media only screen and (min-width:1023px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
     }
 
     &_card {
@@ -133,6 +149,9 @@ main {
         border-radius: $border-radius;
         box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;
         flex: 0 0 auto;
+        @media only screen and (min-width:1023px) {
+            width: 49%;
+        }
         &:hover {
             box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow-hover;
             transform: scale(1.02);
@@ -155,6 +174,9 @@ main {
             background-size: cover;
             background-position: bottom;
             border-radius: $border-radius $border-radius 0 0;
+            @media only screen and (min-width:540px) {
+                background-position: center;
+            }
             &_new {
                 display: flex;
                 position: absolute;
@@ -166,8 +188,10 @@ main {
                 border-radius: 3px;
                 @include color_new;
                 background-color: $color-tertiary;
-                @media only screen and (min-width:540px) and (max-width: 1024px) {
-                    background-position: center;
+                @media only screen and (min-width:1023px) {
+                    position: relative;
+                    height: 30px;
+                    margin-left:84%;
                 }
             }
             &_1 {
@@ -176,7 +200,7 @@ main {
             &_2 {
                 background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_note_enchantée.jpg);
                 background-position: bottom -95px center;
-                @media only screen and (min-width:540px) and (max-width: 1024px) {
+                @media only screen and (min-width:540px) {
                     background-position: center;
                 }
             }

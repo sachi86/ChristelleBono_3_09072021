@@ -5,6 +5,10 @@
     width: 100%;
     background-color:#353535;
     padding: 25px 0 35px 25px;
+    @media only screen and (min-width:1023px) {
+        display: flex;
+        align-items: center;
+    }
     &_logo {
         width: 105px;
         filter: invert(1);
@@ -13,6 +17,13 @@
     }
     &_list {
         list-style: none;
+        width: 100%;
+        @media only screen and (min-width:1023px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
         &_composant {
             color: white;
             padding-bottom: 5px;
@@ -23,6 +34,6 @@
         }
     }
 }
-footer a {
+.footer a {
     color: white;
 }

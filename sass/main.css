@@ -97,7 +97,7 @@ main {
   text-align: center;
   font-weight: bold;
   border: transparent;
-  font-size: 3vh;
+  font-size: 0.95rem;
 }
 .search_form_icon {
   color: #6F6F6F;
@@ -114,10 +114,10 @@ main {
 }
 .search_explain_title {
   margin: 40px 50px 20px 50px;
-  font-size: 6vh;
+  font-size: 1.5rem;
 }
 .search_explain_paragraph {
-  font-size: 3.75vh;
+  font-size: 1.1rem;
   margin-bottom: 30px;
 }
 
@@ -127,8 +127,23 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (min-width: 1023px) {
+  .fonctionnement {
+    height: 250px;
+  }
+}
 .fonctionnement_title {
   margin: 50px 0 30px 0;
+}
+.fonctionnement_explains {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-width: 1023px) {
+  .fonctionnement_explains {
+    flex-direction: row;
+  }
 }
 
 .explain {
@@ -158,7 +173,7 @@ main {
   background-color: #F6F6F6;
   border-radius: 25px;
   margin-bottom: 20px;
-  box-shadow: 5px 5px 5px #dadada;
+  box-shadow: 4px 4px 4px #dadada;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -172,7 +187,7 @@ main {
   color: #6F6F6F;
 }
 .explain_card:hover {
-  box-shadow: 7px 7px 7px #dadada;
+  box-shadow: 5px 5px 5px #dadada;
   background: #f4eefc;
 }
 .explain_card:hover .explain_card_icon {
@@ -197,6 +212,13 @@ main {
   width: 90%;
   height: 100%;
 }
+@media only screen and (min-width: 1023px) {
+  .restaurants_cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
 .restaurants_card {
   flex-flow: column wrap;
   width: 100%;
@@ -204,11 +226,16 @@ main {
   margin-bottom: 20px;
   background-color: white;
   border-radius: 25px;
-  box-shadow: 5px 5px 5px #dadada;
+  box-shadow: 4px 4px 4px #dadada;
   flex: 0 0 auto;
 }
+@media only screen and (min-width: 1023px) {
+  .restaurants_card {
+    width: 49%;
+  }
+}
 .restaurants_card:hover {
-  box-shadow: 7px 7px 7px #c5c4c4;
+  box-shadow: 5px 5px 5px #c5c4c4;
   transform: scale(1.02);
   transition: all 0.2s;
   -webkit-backface-visibility: hidden;
@@ -232,6 +259,11 @@ main {
   background-position: bottom;
   border-radius: 25px 25px 0 0;
 }
+@media only screen and (min-width: 540px) {
+  .restaurants_card_image {
+    background-position: center;
+  }
+}
 .restaurants_card_image_new {
   display: flex;
   position: absolute;
@@ -244,9 +276,11 @@ main {
   color: #278870;
   background-color: #99E2D0;
 }
-@media only screen and (min-width: 540px) and (max-width: 1024px) {
+@media only screen and (min-width: 1023px) {
   .restaurants_card_image_new {
-    background-position: center;
+    position: relative;
+    height: 30px;
+    margin-left: 84%;
   }
 }
 .restaurants_card_image_1 {
@@ -256,7 +290,7 @@ main {
   background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_note_enchantée.jpg);
   background-position: bottom -95px center;
 }
-@media only screen and (min-width: 540px) and (max-width: 1024px) {
+@media only screen and (min-width: 540px) {
   .restaurants_card_image_2 {
     background-position: center;
   }
@@ -419,11 +453,11 @@ main {
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 5px 5px 5px #dadada;
+  box-shadow: 4px 4px 4px #dadada;
 }
 .btn:hover {
   background: linear-gradient(to top left, #a674e2, #ff9de4);
-  box-shadow: 7px 7px 7px #c5c4c4;
+  box-shadow: 5px 5px 5px #c5c4c4;
 }
 
 .footer {
@@ -434,6 +468,12 @@ main {
   background-color: #353535;
   padding: 25px 0 35px 25px;
 }
+@media only screen and (min-width: 1023px) {
+  .footer {
+    display: flex;
+    align-items: center;
+  }
+}
 .footer_logo {
   width: 105px;
   filter: invert(1);
@@ -442,6 +482,14 @@ main {
 }
 .footer_list {
   list-style: none;
+  width: 100%;
+}
+@media only screen and (min-width: 1023px) {
+  .footer_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .footer_list_composant {
   color: white;
@@ -452,7 +500,7 @@ main {
   margin-right: 0.7rem;
 }
 
-footer a {
+.footer a {
   color: white;
 }
 
@@ -484,6 +532,7 @@ footer a {
   background-color: #F6F6F6;
   margin-top: -40px;
   padding-top: 30px;
+  margin-bottom: -30px;
   z-index: 400;
 }
 .restaurants_head_title {
@@ -503,11 +552,28 @@ footer a {
   background-color: #F6F6F6;
   padding: 4%;
 }
-.menu_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media only screen and (min-width: 1024px) {
+  .menu {
+    padding: 1%;
+  }
+}
+.menu_section {
   width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  .menu_section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.menu_deshes {
+  width: 100%;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 1024px) {
+  .menu_deshes {
+    margin-right: 2%;
+  }
 }
 .menu_dish {
   display: flex;
@@ -525,11 +591,11 @@ footer a {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 66px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px #dadada;
-  margin: 10px 0 10px 0;
+  box-shadow: 4px 4px 4px #dadada;
+  margin: 15px 0 10px 0;
   -webkit-animation: anim-menu-box 1000ms both;
           animation: anim-menu-box 1000ms both;
 }
@@ -558,7 +624,7 @@ footer a {
   transform: scale(1);
 }
 .menu_dish_container_checkbox:checked + label {
-  box-shadow: 7px 7px 7px #c5c4c4;
+  box-shadow: 5px 5px 5px #c5c4c4;
 }
 .menu_dish_container_checkbox:checked + label > .menu_dish_option_aside {
   margin-right: 20px;
@@ -576,7 +642,7 @@ footer a {
           user-select: none;
 }
 .menu_dish_option:hover {
-  box-shadow: 7px 7px 7px #c5c4c4;
+  box-shadow: 5px 5px 5px #c5c4c4;
 }
 .menu_dish_option:hover .menu_dish_option_check {
   transform: scaleX(1);
@@ -635,7 +701,7 @@ footer a {
   margin-bottom: 10px;
   margin-right: -60px;
 }
-@media only screen and (min-width: 540px) and (max-width: 1024px) {
+@media only screen and (min-width: 540px) and (max-width: 1023px) {
   .menu_dish_option_aside {
     margin-right: -30%;
   }
