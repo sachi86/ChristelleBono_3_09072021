@@ -4,6 +4,7 @@ main {
     align-items: center;
     width: 100%;
 }
+/************search's section**********/
 .search {
     display: flex;
     flex-direction: column;
@@ -53,6 +54,7 @@ main {
         }
     }
 }
+/********Fonctionnement's section********/
 .fonctionnement {
     width: 90%;
     height: 440px;
@@ -88,7 +90,7 @@ main {
         color: white;
         margin-bottom: 20px;
         margin-right: -10px;
-        z-index: 1000;
+        z-index: 900;
     }
     &_card {
         display:flex;
@@ -117,6 +119,7 @@ main {
         }
     }
 }
+/************Restaurants's section*************/
 .restaurants {
     display: flex;
     flex-direction: column;
