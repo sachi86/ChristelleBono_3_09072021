@@ -8,19 +8,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
-        <title>Ohmyfood - La note enchantée</title>
+        <title>Ohmyfood - La palette du gôut</title>
     </head>
     <body>
-    <!--Header page restaurants-->
+        <!--Header page restaurants-->
         <header class="header_restaurants">
             <a href="index.html"><i class="header_restaurants_icon fa fa-arrow-left" aria-hidden="true"></i></a>
             <a href="index.html"><img class="header_restaurants_logo" src="medias/logo/ohmyfood@2x.svg" alt="Logo de Reservia"></a>
         </header>
         <main>
             <!--Restaurant's Pictures-->
-            <div class="food_image food_image_française"></div>
+            <div class="food_image food_image_note"></div>
             <div class="anim-menu">
-            <!--Restaurant's name-->
+                <!--Restaurant's name-->
                 <div class="restaurants_head">
                     <h1 class="restaurants_head_title">La note enchantée</h1>
                     <!--Can you like this restaurant-->
@@ -32,168 +32,153 @@
                 <!--Menu-->
                 <form class="menu" method="POST" action="#">
                     <div class="menu_section">
-                        <div class="menu_deshes">
-                        <!--Entrees menu-->
+                        <fieldset class="menu_deshes">
+                            <!--Entrees menu-->
                             <legend class="menu_dish">ENTREES</legend>
                             <div class="menu_dish_container menu_dish_container_1">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="entree" id="Ravioles">
-                                <label class="menu_dish_option"for="Ravioles">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Ravioles de foie gras</h4>
-                                        <p class="menu_dish_option_description_p">Accompagnés de leur crème à la truffe</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>25€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>  
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Ravioles">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="entree" id="Ravioles">
+                                        Ravioles de foie gras
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Accompagnés de leur crème à la truffe</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>25€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
                             </div>
                             <div class="menu_dish_container menu_dish_container_2">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="entree" id="Caviar">
-                                <label class="menu_dish_option"for="Caviar">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Caviar osciètre</h4>
-                                        <p class="menu_dish_option_description_p">Sur blini à la farine de blé noir</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>35€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Caviar">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="entree" id="Caviar">
+                                        Caviar osciètre
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Sur blini à la farine de blé noir</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>  
                             </div>
                             <div class="menu_dish_container menu_dish_container_3">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="entree" id="Homard">
-                                <label class="menu_dish_option"for="Homard">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Homard et espuma de potiron</h4>
-                                        <p class="menu_dish_option_description_p">Mariné aux zestes d'orange</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>20€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Foie-gras">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="entree" id="Foie-gras">
+                                        Foie gras de canard cuit entier
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Confiture de figue et pain toasté</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>20€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
                             </div>
-                            <div class="menu_dish_container menu_dish_container_4">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="entree" id="Foie">
-                                <label class="menu_dish_option"for="Foie">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Foie gras de canard cuit entier</h4>
-                                        <p class="menu_dish_option_description_p">Confiture de figue et pain toasté</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>35€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="menu_deshes">
+                        </fieldset>
+                        <fieldset class="menu_deshes">
                             <!--Deshes menu-->
                             <legend class="menu_dish">PLATS</legend>
                             <div class="menu_dish_container menu_dish_container_1">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="dish" id="Noix">
-                                <label class="menu_dish_option"for="Noix">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Noix de coquilles Saint-Jacques</h4>
-                                        <p class="menu_dish_option_description_p">Sur lit de purée de céleri-rave</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>40€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Noix">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="dish" id="Noix">
+                                        Noix de coquilles Saint-Jacques
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Sur lit de purée de céleri-rave</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>40€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
                             </div>
                             <div class="menu_dish_container menu_dish_container_2">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="dish" id="Langoustine">
-                                <label class="menu_dish_option"for="Langoustine">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Langoustine poêlée</h4>
-                                        <p class="menu_dish_option_description_p">Purée de patate douce</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>35€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Langoustine">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="dish" id="Langoustine">
+                                        Langoustine poêlée
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Purée de patate douce</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
                             </div>
                             <div class="menu_dish_container menu_dish_container_3">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="dish" id="Mijoté">
-                                <label class="menu_dish_option"for="Mijoté">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Mijoté de queue de boeuf</h4>
-                                        <p class="menu_dish_option_description_p">Et riz sauvage aux zestes de citron</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>44€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Mijoté">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="dish" id="Mijoté">
+                                        Mijoté de queue de boeuf
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Et riz sauvage aux zestes de citron</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>44€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="menu_deshes">
+                        </fieldset>
+                        <fieldset class="menu_deshes">
                             <!--Dessert menu-->
                             <legend class="menu_dish">DESSERT</legend>
                             <div class="menu_dish_container menu_dish_container_1">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="dessert" id="Macaron">
-                                <label class="menu_dish_option"for="Macaron">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Macaron noisette et chocolat</h4>
-                                        <p class="menu_dish_option_description_p">Glace au caramel brun et sel de Guérande</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>18€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Macaron">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="dessert" id="Macaron">
+                                        Macaron noisette et chocolat
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Glace au caramel brun et sel de Guérande</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>18€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
                             </div>
                             <div class="menu_dish_container menu_dish_container_2">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="dessert" id="Baba">
-                                <label class="menu_dish_option"for="Baba">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Baba au rhum revisité</h4>
-                                        <p class="menu_dish_option_description_p">Avec son coulis de citron</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>22€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
-                                        <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Baba">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="dessert" id="Baba">
+                                        Baba au rhum revisité
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Avec son coulis de citron</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>22€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
+                                    <i class="menu_dish_container_check_icon fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
                             </div>
                             <div class="menu_dish_container menu_dish_container_3">
-                                <input class="menu_dish_container_checkbox" type="checkbox" name="dessert" id="Tarte">
-                                <label class="menu_dish_option"for="Tarte">
-                                    <div class="menu_dish_option_description">
-                                        <h4 class="menu_dish_option_description_title">Tarte au citron meringuée</h4>
-                                        <p class="menu_dish_option_description_p">Déstructurée</p>
-                                    </div>
-                                    <div class="menu_dish_option_aside">
-                                        <p>23€</p>
-                                    </div>
-                                    <div class="menu_dish_option_check">
+                                <div class="menu_dish_container_description">
+                                    <label class="menu_dish_container_description_title" for="Tarte">
+                                        <input class="menu_dish_container_description_title_checkbox" type="checkbox" name="dessert" id="Tarte">
+                                        Tarte au citron meringuée
+                                    </label>
+                                    <p class="menu_dish_container_description_aside">Déstructurée</p>
+                                </div>
+                                <div class="menu_dish_container_price">
+                                    <p>23€</p>
+                                </div>
+                                <div class="menu_dish_container_check">
                                         <i class="menu_dish_option_check_icon fa fa-check-circle" aria-hidden="true"></i>
-                                    </div>
-                                </label>
+                                </div>
                             </div>
-                        </div>
+                        </fieldset>
                     </div>
                     <div class="menu_dish_button">
                         <button class="btn search_explain_btn" type="submit">
@@ -205,12 +190,12 @@
         </main>
         <!--Footer-->
         <footer class="footer">
-            <div><img class="footer_logo" src="medias/logo/ohmyfood@2x.svg"alt="logo de Ohmyfood"/></div>
+            <div><img class="footer_logo" src="medias/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood"/></div>
             <ul class="footer_list">
-                <li class="footer_list_composant"><a href="#"><i class="footer_list_composant_icon fa fa-cutlery" aria-hidden="true"></i></i>Devenir partenaire</a></li>
+                <li class="footer_list_composant"><a href="#"><i class="footer_list_composant_icon fa fa-cutlery" aria-hidden="true"></i>Devenir partenaire</a></li>
                 <li class="footer_list_composant"><a href="#"><i class="footer_list_composant_icon fas fa-hands-helping" aria-hidden="true"></i>Devenir partenaire</a></li>
                 <li class="footer_list_composant"><a href="#">Mentions légales</a></li>
-                <li class="footer_list_composant"><a href="#">Contact</a></li>
+                <li class="footer_list_composant"><a href="mailto:ohmyfood@mail.com">Contact</a></li>
             </ul>
         </footer>
     </body>
