@@ -64,6 +64,7 @@ a:focus {
   position: absolute;
   font-size: 1.5rem;
   left: 8%;
+  margin-top: -10px;
 }
 
 main {
@@ -367,34 +368,34 @@ main {
 /****Check's animation****/
 @-webkit-keyframes slide-right {
   0% {
-    transform: transformX(0);
+    transform: translateX(0);
   }
   100% {
-    transform: transformX(66px);
+    transform: translateX(-66px);
   }
 }
 @keyframes slide-right {
   0% {
-    transform: transformX(0);
+    transform: translateX(0);
   }
   100% {
-    transform: transformX(66px);
+    transform: translateX(-66px);
   }
 }
 @-webkit-keyframes slide-left {
   0% {
-    margin-right: 0px;
+    transform: translateX(0);
   }
   100% {
-    margin-right: 20px;
+    transform: translateX(-20px);
   }
 }
 @keyframes slide-left {
   0% {
-    margin-right: 0px;
+    transform: translateX(0);
   }
   100% {
-    margin-right: 20px;
+    transform: translateX(-20px);
   }
 }
 @-webkit-keyframes rotate-icon {
@@ -556,54 +557,98 @@ main {
 }
 @-webkit-keyframes food {
   0% {
-    margin-top: 0;
-    text-shadow: 0 0 0 #9356DC;
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: -80px;
+    text-shadow: 0 0 0 #FF79DA;
   }
   50% {
     margin-top: -120px;
+    opacity: 1;
+    text-shadow: 0 0 0 #9356DC;
+  }
+  75% {
+    margin-top: -80px;
+    opacity: 1;
     text-shadow: 0 0 0 #FF79DA;
   }
   100% {
-    margin-top: 0;
+    margin-top: 0px;
+    opacity: 0;
   }
 }
 @keyframes food {
   0% {
-    margin-top: 0;
-    text-shadow: 0 0 0 #9356DC;
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: -80px;
+    text-shadow: 0 0 0 #FF79DA;
   }
   50% {
     margin-top: -120px;
+    opacity: 1;
+    text-shadow: 0 0 0 #9356DC;
+  }
+  75% {
+    margin-top: -80px;
+    opacity: 1;
     text-shadow: 0 0 0 #FF79DA;
   }
   100% {
-    margin-top: 0;
+    margin-top: 0px;
+    opacity: 0;
   }
 }
 @-webkit-keyframes food-mobile {
   0% {
     margin-top: 0;
-    text-shadow: 0 0 0 #9356DC;
+    opacity: 0;
+  }
+  25% {
+    margin-top: -30px;
+    opacity: 1;
+    text-shadow: 0 0 0 #FF79DA;
   }
   50% {
     margin-top: -60px;
+    opacity: 1;
+    text-shadow: 0 0 0 #9356DC;
+  }
+  75% {
+    margin-top: -30px;
     text-shadow: 0 0 0 #FF79DA;
   }
   100% {
     margin-top: 0;
+    opacity: 0;
   }
 }
 @keyframes food-mobile {
   0% {
     margin-top: 0;
-    text-shadow: 0 0 0 #9356DC;
+    opacity: 0;
+  }
+  25% {
+    margin-top: -30px;
+    opacity: 1;
+    text-shadow: 0 0 0 #FF79DA;
   }
   50% {
     margin-top: -60px;
+    opacity: 1;
+    text-shadow: 0 0 0 #9356DC;
+  }
+  75% {
+    margin-top: -30px;
     text-shadow: 0 0 0 #FF79DA;
   }
   100% {
     margin-top: 0;
+    opacity: 0;
   }
 }
 @-webkit-keyframes letters {
@@ -795,6 +840,7 @@ main {
 .menu_deshes {
   width: 100%;
   margin-top: 50px;
+  border: transparent;
 }
 @media only screen and (min-width: 1024px) {
   .menu_deshes {
@@ -813,6 +859,19 @@ main {
   height: 6px;
   border-bottom: 3px solid #99E2D0;
 }
+.menu_dish_checked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  color: white;
+  border-radius: 15px 0 0 15px;
+  background: linear-gradient(to top left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  transform-origin: 100% 0%;
+  transform: scaleX(0);
+  transition: transform 500ms cubic-bezier(0.32, 0, 0.07, 1);
+}
 .menu_dish_container {
   display: flex;
   align-items: center;
@@ -822,6 +881,12 @@ main {
   border-radius: 15px;
   box-shadow: 4px 4px 4px #dadada;
   margin: 15px 0 10px 0;
+  cursor: pointer;
+  z-index: 300;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-animation: anim-menu-box 1000ms both;
           animation: anim-menu-box 1000ms both;
 }
@@ -841,96 +906,86 @@ main {
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
 }
-.menu_dish_container_checkbox {
-  opacity: 0;
-  margin-right: -10px;
-}
-.menu_dish_container_checkbox:checked + label > .menu_dish_option_check {
-  background: #4acbab;
-  transform: scale(1);
-}
-.menu_dish_container_checkbox:checked + label {
+.menu_dish_container:hover {
   box-shadow: 5px 5px 5px #c5c4c4;
 }
-.menu_dish_container_checkbox:checked + label > .menu_dish_option_aside {
-  margin-right: 20px;
-}
-.menu_dish_option {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 15px;
-  width: 100%;
-  height: 66px;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.menu_dish_option:hover {
-  box-shadow: 5px 5px 5px #c5c4c4;
-}
-.menu_dish_option:hover .menu_dish_option_check {
+.menu_dish_container:hover .menu_dish_container_check {
   transform: scaleX(1);
 }
-.menu_dish_option:hover .menu_dish_option_aside {
+.menu_dish_container:hover .menu_dish_container_price {
   -webkit-animation: slide-left 500ms both;
           animation: slide-left 500ms both;
 }
-.menu_dish_option:hover .menu_dish_option_check_icon {
+.menu_dish_container:hover .menu_dish_container_check_icon {
   -webkit-animation: rotate-icon 500ms ease;
           animation: rotate-icon 500ms ease;
 }
-.menu_dish_option_check {
+.menu_dish_container_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 66px;
+  line-height: 1.6rem;
+  padding-left: 10px;
+  border-radius: 15px 0 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+.menu_dish_container_description_title {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu_dish_container_description_title_checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 66px;
+  z-index: 500;
+  width: 100%;
+}
+.menu_dish_container_description_title_checkbox:checked + .menu_dish_container_description {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-repeat: no-repeat;
+  -webkit-animation: animHeart 0.8s linear;
+          animation: animHeart 0.8s linear;
+  color: white;
+}
+.menu_dish_container_description_aside {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu_dish_container_price {
+  display: flex;
+  width: 20%;
+  align-self: flex-end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  margin-left: 8%;
+  margin-right: -15%;
+}
+.menu_dish_container_check {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24%;
+  width: 60px;
   height: 100%;
   color: white;
   border-radius: 0 15px 15px 0;
   background: #99E2D0;
   transform-origin: 100% 0%;
-  transform: scaleX(0);
   transition: transform 500ms cubic-bezier(0.32, 0, 0.07, 1);
+  transform: scaleX(0);
 }
-.menu_dish_option_check_icon {
+.menu_dish_container_check_icon {
   font-size: 1.3rem;
-}
-.menu_dish_option_description {
-  width: 80%;
-  line-height: 1.5rem;
-  padding: 10px 0 10px 10px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.menu_dish_option_description_title {
-  font-size: 1.1rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.menu_dish_option_description_p {
-  font-size: 0.95rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.menu_dish_option_aside {
-  font-size: 1rem;
-  width: 20%;
-  align-self: flex-end;
-  justify-content: flex-end;
-  padding-left: 9%;
-  font-weight: bolder;
-  margin-bottom: 10px;
-  margin-right: -60px;
-}
-@media only screen and (min-width: 540px) and (max-width: 1023px) {
-  .menu_dish_option_aside {
-    margin-right: -30%;
-  }
 }
 .menu_dish_button {
   align-self: center;
@@ -945,7 +1000,7 @@ main {
   right: 0;
   background: rgba(255, 255, 255, 0.8);
   z-index: 999;
-  transform: scale(0);
+  transform: scaleZ(0);
   -webkit-animation: loader 3s linear;
           animation: loader 3s linear;
 }
@@ -1075,7 +1130,13 @@ main {
   justify-content: center;
   width: 100%;
   height: 100px;
-  margin-right: 30px;
+  margin-right: -80px;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .load_letters {
+    margin-top: 10px;
+  }
 }
 .load_letters_letter {
   font-family: "Shrikhand", cursive;

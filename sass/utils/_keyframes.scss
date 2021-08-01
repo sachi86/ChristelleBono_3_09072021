@@ -17,19 +17,19 @@
   }
 /****Check's animation****/
 @keyframes slide-right {
-  0% {
-    transform:transformX(0); 
-  }
-  100% {
-    transform:transformX(66px);
+0% {
+  transform: translateX(0);
+}
+100% {
+  transform: translateX(-66px);
   }
 }
 @keyframes slide-left {
   0% {
-    margin-right: 0px;
+    transform: translateX(0);
   }
   100% {
-    margin-right: 20px;
+    transform: translateX(-20px);
   }
 }
 @keyframes rotate-icon {
@@ -137,28 +137,50 @@
 }
 @keyframes food {
   0% {
-    margin-top:0;
-    text-shadow: 0 0 0 $color-primary; 
+    margin-top:0px; 
+    opacity: 0;
+  }
+  25% {
+    margin-top: -80px;
+    text-shadow: 0 0 0 $color-secondary;
   }
   50% {
     margin-top:-120px;
+    opacity: 1;
+    text-shadow: 0 0 0 $color-primary;
+  }
+  75% {
+    margin-top: -80px;
+    opacity: 1;
     text-shadow: 0 0 0 $color-secondary;
   }
   100% {
-    margin-top:0;
+    margin-top:0px;
+    opacity: 0;
   }
 }
 @keyframes food-mobile {
   0% {
     margin-top:0;
-    text-shadow: 0 0 0 $color-primary; 
+    opacity: 0;
+  }
+  25% {
+    margin-top:-30px;
+    opacity: 1;
+    text-shadow: 0 0 0 $color-secondary;
   }
   50% {
     margin-top:-60px;
+    opacity: 1;
+    text-shadow: 0 0 0 $color-primary;
+  }
+  75% {
+    margin-top:-30px;
     text-shadow: 0 0 0 $color-secondary;
   }
   100% {
     margin-top:0;
+    opacity: 0;
   }
 }
 @keyframes letters {
