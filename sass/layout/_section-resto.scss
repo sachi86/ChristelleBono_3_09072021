@@ -97,7 +97,7 @@
         &_container {
             display: flex;
             align-items: center;
-            width:100%;
+            width:92vw;
             height:66px;
             background-color: white;
             border-radius: $border-radius-menu;
@@ -107,6 +107,9 @@
             z-index:300;
             user-select: none;
             animation: anim-menu-box  1000ms both;
+            @media only screen and (min-width:1024px) {
+                width:100%;
+            }
             &_1 {
                 animation-delay: 400ms;
             }
@@ -142,7 +145,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                flex: 1;
+                flex:1;
                 &_title {
                     font-size: 1.1rem;
                     font-weight: bolder;

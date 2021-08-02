@@ -875,7 +875,7 @@ main {
 .menu_dish_container {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 92vw;
   height: 66px;
   background-color: white;
   border-radius: 15px;
@@ -889,6 +889,11 @@ main {
           user-select: none;
   -webkit-animation: anim-menu-box 1000ms both;
           animation: anim-menu-box 1000ms both;
+}
+@media only screen and (min-width: 1024px) {
+  .menu_dish_container {
+    width: 100%;
+  }
 }
 .menu_dish_container_1 {
   -webkit-animation-delay: 400ms;
