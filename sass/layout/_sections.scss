@@ -244,10 +244,9 @@ main {
                 background-size: 100% 100%; 
                 background-position: bottom;
                 background-repeat: no-repeat;
-                background-clip:text;
                 -webkit-background-clip:text;
                 animation: animHeart 0.6s linear;
-                -webkit-animation: animHeart 0.6s linear;    
+                -webkit-animation: animFilling 0.6s linear;    
             }
             &:hover &_empty {
                 opacity: 0.1;

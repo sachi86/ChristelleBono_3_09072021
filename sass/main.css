@@ -337,10 +337,9 @@ main {
   background-size: 100% 100%;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-clip: text;
   -webkit-background-clip: text;
   animation: animHeart 0.6s linear;
-  -webkit-animation: animHeart 0.6s linear;
+  -webkit-animation: animFilling 0.6s linear;
 }
 .restaurants_description_like:hover .restaurants_description_like_empty {
   opacity: 0.1;
@@ -349,7 +348,7 @@ main {
 }
 
 /*****Heart's animation*****/
-@-webkit-keyframes animHeart {
+@-webkit-keyframes animFilling {
   0% {
     background-size: 100% 0%;
   }
@@ -357,7 +356,7 @@ main {
     background-size: 100% 100%;
   }
 }
-@keyframes animHeart {
+@keyframes animFilling {
   0% {
     background-size: 100% 0%;
   }
@@ -387,7 +386,7 @@ main {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-20px);
+    transform: translateX(-55px);
   }
 }
 @keyframes slide-left {
@@ -395,7 +394,7 @@ main {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-20px);
+    transform: translateX(-55px);
   }
 }
 @-webkit-keyframes rotate-icon {
@@ -821,6 +820,7 @@ main {
   justify-content: center;
   width: 100%;
   background-color: #F6F6F6;
+  overflow: hidden;
   padding: 4%;
 }
 @media only screen and (min-width: 1024px) {
@@ -838,13 +838,17 @@ main {
   }
 }
 .menu_deshes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-top: 50px;
   border: transparent;
 }
 @media only screen and (min-width: 1024px) {
-  .menu_deshes {
-    margin-right: 2%;
+  .menu_deshes_milieu {
+    margin-right: 1%;
+    margin-left: 1%;
   }
 }
 .menu_dish {
@@ -863,6 +867,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
   width: 60px;
   height: 100%;
   color: white;
@@ -891,6 +896,11 @@ main {
           animation: anim-menu-box 1000ms both;
 }
 @media only screen and (min-width: 1024px) {
+  .menu_dish_container {
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .menu_dish_container {
     width: 100%;
   }
@@ -931,7 +941,7 @@ main {
   justify-content: center;
   height: 66px;
   line-height: 1.6rem;
-  padding-left: 10px;
+  padding: 0 40px 0 10px;
   border-radius: 15px 0 0 15px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -949,14 +959,14 @@ main {
   position: absolute;
   opacity: 0;
   height: 66px;
-  z-index: 500;
   width: 100%;
+  z-index: 500;
 }
 .menu_dish_container_description_title_checkbox:checked + .menu_dish_container_description {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   background-repeat: no-repeat;
-  -webkit-animation: animHeart 0.8s linear;
-          animation: animHeart 0.8s linear;
+  -webkit-animation: animFilling 0.8s linear;
+          animation: animFilling 0.8s linear;
   color: white;
 }
 .menu_dish_container_description_aside {
@@ -974,7 +984,7 @@ main {
   font-weight: bolder;
   margin-bottom: 10px;
   margin-left: 8%;
-  margin-right: -15%;
+  margin-right: -23%;
 }
 .menu_dish_container_check {
   display: flex;
