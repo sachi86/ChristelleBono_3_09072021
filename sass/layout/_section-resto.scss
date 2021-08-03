@@ -169,11 +169,13 @@
                         height: 66px;
                         width: 100%;
                         z-index: 500;
-                        &:checked + .menu_dish_container_description {
-                            background:linear-gradient(to top left, $color-primary, $color-secondary);
-                            background-repeat: no-repeat;
-                            animation: animFilling 0.8s linear;
-                            color:white;
+                        @media only screen and (min-width:1024px) {
+                            &:checked + .menu_dish_container_description {
+                                background:linear-gradient(to top left, $color-primary, $color-secondary);
+                                background-repeat: no-repeat;
+                                animation: animFilling 0.8s linear;
+                                color:white;
+                            }
                         }
                     }
                 }

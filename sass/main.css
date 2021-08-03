@@ -67,6 +67,13 @@ a:focus {
   margin-top: -10px;
 }
 
+.header_restaurants a {
+  color: black;
+}
+.header_restaurants a:visited {
+  color: black;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -962,12 +969,14 @@ main {
   width: 100%;
   z-index: 500;
 }
-.menu_dish_container_description_title_checkbox:checked + .menu_dish_container_description {
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  background-repeat: no-repeat;
-  -webkit-animation: animFilling 0.8s linear;
-          animation: animFilling 0.8s linear;
-  color: white;
+@media only screen and (min-width: 1024px) {
+  .menu_dish_container_description_title_checkbox:checked + .menu_dish_container_description {
+    background: linear-gradient(to top left, #9356DC, #FF79DA);
+    background-repeat: no-repeat;
+    -webkit-animation: animFilling 0.8s linear;
+            animation: animFilling 0.8s linear;
+    color: white;
+  }
 }
 .menu_dish_container_description_aside {
   overflow: hidden;

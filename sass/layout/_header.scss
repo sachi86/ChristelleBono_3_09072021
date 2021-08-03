@@ -27,4 +27,10 @@
         margin-top:-10px;
     }
 }
+.header_restaurants a {
+    color: black;
+    &:visited {
+        color: black;
+    }
+}
 
