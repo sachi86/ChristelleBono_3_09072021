@@ -338,7 +338,7 @@ main {
   background-position: bottom;
   background-repeat: no-repeat;
   -webkit-background-clip: text;
-  animation: animHeart 0.6s linear;
+  animation: animFilling 0.6s linear;
   -webkit-animation: animFilling 0.6s linear;
 }
 .restaurants_description_like:hover .restaurants_description_like_empty {
