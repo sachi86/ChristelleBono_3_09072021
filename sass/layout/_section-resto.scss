@@ -1,224 +1,231 @@
 
 /*************Restaurant's picture*************/
 .food_image {
-        width: 100%;
-        height: 300px;
-        background-size: cover;
-        background-position:center;
-        z-index:-200;
-        &_palette {
-            background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
-        }
-        &_note {
-            background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_note_enchantée.jpg);
-        }
-        &_française {
-            background-image: url(/ChristelleBono_3_09072021/medias/restaurants/a_la_française.jpg);
-        }
-        &_sens {
-            background-image: url(/ChristelleBono_3_09072021/medias/restaurants/le_délices_des_sens.jpg);
-        }
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position:center;
+    z-index:-200;
+    &_palette {
+        background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_palette_du_gôut.jpg);
+    }
+    &_note {
+        background-image: url(/ChristelleBono_3_09072021/medias/restaurants/la_note_enchantée.jpg);
+    }
+    &_française {
+        background-image: url(/ChristelleBono_3_09072021/medias/restaurants/a_la_française.jpg);
+    }
+    &_sens {
+        background-image: url(/ChristelleBono_3_09072021/medias/restaurants/le_délices_des_sens.jpg);
+    }
 }
 /*******Main's animation*******/
 .anim-menu {
-    width: 100%;
-    animation:anim-menu 1000ms ease-in-out;
+width: 100%;
+animation:anim-menu 1000ms ease-in-out;
 }
 /*******Restaurant's title*******/
 .restaurants_head {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    border-radius: $border-radius $border-radius 0 0;
-    background-color:$color-background;
-    margin-top:-40px;
-    padding-top: 30px;
-    margin-bottom:-20px;
-    z-index: 400;
-    &_title {
-        font-size: 1.8rem;
-        font-weight: 400;
-        font-family:'Shrikhand', sans-serif;
-    }
-    &_heart {
-        margin-right: 5%;
-    }
+display: flex;
+justify-content: space-around;
+width: 100%;
+border-radius: $border-radius $border-radius 0 0;
+background-color:$color-background;
+margin-top:-40px;
+padding-top: 30px;
+margin-bottom:-20px;
+z-index: 400;
+&_title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family:'Shrikhand', sans-serif;
+}
+&_heart {
+    margin-right: 5%;
+}
 }
 /******Menu's section******/
 .menu {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width:100%;
-    background-color: $color-background;
-    overflow: hidden;
-    padding: 4%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+width:100%;
+background-color: $color-background;
+overflow: hidden;
+padding: 4%;
+@media only screen and (min-width:1024px) {
+    padding: 1%;
+}
+&_section {
+    width: 100%;
     @media only screen and (min-width:1024px) {
-        padding: 1%;
+        display: flex;
+        flex-direction: row;
     }
-    &_section {
-        width: 100%;
+}
+&_deshes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    border: transparent;
+    &_milieu {
         @media only screen and (min-width:1024px) {
-            display: flex;
-            flex-direction: row;
+            margin-right:1%;
+            margin-left: 1%;
         }
     }
-    &_deshes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 50px;
-        border: transparent;
-        &_milieu {
-            @media only screen and (min-width:1024px) {
-                margin-right:1%;
-                margin-left: 1%;
-            }
-        }
+}
+&_dish {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    &::after {
+        display: block;
+        content: "";
+        width: 40px;
+        height: 6px;
+        border-bottom: 3px solid $color-tertiary;
     }
-    &_dish {
+    &_checked {
         display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-        &::after {
-            display: block;
-            content: "";
-            width: 40px;
-            height: 6px;
-            border-bottom: 3px solid $color-tertiary;
-        }
-        &_checked {
-            display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 15px;
-                width: 60px;
-                height: 100%;
-                color: white;
-                border-radius: $border-radius-menu 0 0 $border-radius-menu;
-                background:linear-gradient(to top left, rgba(147,86,220,0.8), rgba(255,121,218,0.8));
-                transform-origin: 100% 0%;
-                transform: scaleX(0);
-                transition: transform 500ms cubic-bezier(.32,0,.07,1);
-        }
-        &_container {
-            display: flex;
             align-items: center;
-            width:92vw;
-            height:66px;
-            background-color: white;
-            border-radius: $border-radius-menu;
-            box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;   
-            margin: 15px 0 10px 0;
-            cursor: pointer;
-            z-index:300;
-            user-select: none;
-            animation: anim-menu-box  1000ms both;
-            @media only screen and (min-width:1024px) {
-                width: 320px;
-            }
-            @media only screen and (min-width:1200px) {
-                width: 100%;
-            }
-            &_1 {
-                animation-delay: 400ms;
-            }
-            &_2 {
-                animation-delay: 600ms;
-            }
-            &_3 {
-                animation-delay: 800ms;
-            }
-            &_4 {
-                animation-delay: 1000ms;
-            }
-            &:hover {
-                box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow-hover;
-            }
-            &:hover &_check {
-                transform:scaleX(1);
-            }
-            &:hover &_price {
-                animation: slide-left 500ms both;
-            }
-            &:hover &_check_icon {
-                animation:rotate-icon 500ms ease;
-            }
-            &_description {
+            justify-content: center;
+            margin-bottom: 15px;
+            width: 60px;
+            height: 100%;
+            color: white;
+            border-radius: $border-radius-menu 0 0 $border-radius-menu;
+            background:linear-gradient(to top left, rgba(147,86,220,0.8), rgba(255,121,218,0.8));
+            transform-origin: 100% 0%;
+            transform: scaleX(0);
+            transition: transform 500ms cubic-bezier(.32,0,.07,1);
+    }
+    &_container {
+        display: flex;
+        align-items: center;
+        width:92vw;
+        height:66px;
+        background-color: white;
+        border-radius: $border-radius-menu;
+        box-shadow: $size-shadow $size-shadow $size-shadow $color-shadow;   
+        margin: 15px 0 10px 0;
+        cursor: pointer;
+        z-index:300;
+        user-select: none;
+        animation: anim-menu-box  1000ms both;
+        @media only screen and (min-width:1024px) {
+            width: 320px;
+        }
+        @media only screen and (min-width:1200px) {
+            width: 100%;
+        }
+        &_1 {
+            animation-delay: 400ms;
+        }
+        &_2 {
+            animation-delay: 600ms;
+        }
+        &_3 {
+            animation-delay: 800ms;
+        }
+        &_4 {
+            animation-delay: 1000ms;
+        }
+        &:hover {
+            box-shadow: $size-shadow-hover $size-shadow-hover $size-shadow-hover $color-shadow-hover;
+        }
+        &:hover &_check {
+            transform:scaleX(1);
+        }
+        &:hover &_price {
+            animation: slide-left 500ms both;
+        }
+        &:hover &_check_icon {
+            animation:rotate-icon 500ms ease;
+        }
+        &_description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 66px;
+            line-height: 1.6rem;
+            padding: 0 40px 0 10px;
+            border-radius: $border-radius-menu 0 0 $border-radius-menu;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex:1;
+            &_checked {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 66px;
-                line-height: 1.6rem;
-                padding: 0 40px 0 10px;
-                border-radius: $border-radius-menu 0 0 $border-radius-menu;
+                width: 100%;
+                height: 100%;
+            }
+            &_title {
+                font-size: 1.1rem;
+                font-weight: bolder;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                flex:1;
-                &_title {
-                    font-size: 1.1rem;
-                    font-weight: bolder;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    &_checkbox {
-                        position: absolute;
-                        opacity: 0;
-                        height: 66px;
-                        width: 100%;
-                        z-index: 500;
-                        @media only screen and (min-width:1024px) {
-                            &:checked + .menu_dish_container_description {
-                                background:linear-gradient(to top left, $color-primary, $color-secondary);
-                                background-repeat: no-repeat;
-                                animation: animFilling 0.8s linear;
-                                color:white;
-                            }
-                        }
+                &_checkbox {
+                    position: absolute;
+                    opacity: 0;
+                    height: 66px;
+                    width: 100%;
+                    z-index: 500;
+                    &:checked + .menu_dish_container_description_checked > .menu_dish_container_check {
+                        transform:scale(1);
+                        @include checkbox;
+                    }
+                    &:checked + .menu_dish_container_description_checked > .menu_dish_container_price {
+                        animation: slide-left 500ms both;
+                    }
+                    &:checked + .menu_dish_container_description_checked > .menu_dish_container_check_icon {
+                        animation:rotate-icon 500ms ease;
                     }
                 }
-                &_aside {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-                
             }
-            &_price {
-                display:flex;
-                width: 20%;
-                align-self: flex-end;
+            &_aside {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                font-weight: bolder;
-                margin-bottom:10px;
-                margin-left:8%;
-                margin-right:-23%;
             }
-            &_check {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 60px;
-                height: 100%;
-                color: white;
-                border-radius: 0 $border-radius-menu $border-radius-menu 0;
-                background:$color-tertiary;
-                transform-origin: 100% 0%;
-                transition: transform 500ms cubic-bezier(.32,0,.07,1);
-
-                transform: scaleX(0);
-                &_icon {
-                    font-size: 1.3rem;
-                }
-            }
+            
         }
-        &_button {
-            align-self: center;
-            margin: 2.5rem;
+        &_price {
+            display:flex;
+            width: 20%;
+            align-self: flex-end;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bolder;
+            margin-bottom:10px;
+            margin-left:8%;
+            margin-right:-23%;
+        }
+        &_check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 100%;
+            color: white;
+            border-radius: 0 $border-radius-menu $border-radius-menu 0;
+            background:$color-tertiary;
+            transform-origin: 100% 0%;
+            transition: transform 500ms cubic-bezier(.32,0,.07,1);
+
+            transform: scaleX(0);
+            &_icon {
+                font-size: 1.3rem;
+            }
         }
     }
+    &_button {
+        align-self: center;
+        margin: 2.5rem;
+    }
+}
 }   
