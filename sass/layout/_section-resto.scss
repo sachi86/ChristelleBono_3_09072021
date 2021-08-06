@@ -118,7 +118,10 @@ padding: 4%;
         @media only screen and (min-width:1024px) {
             width: 320px;
         }
-        @media only screen and (min-width:1200px) {
+        @media only screen and (min-width:1180px) {
+            width: 380px;
+        }
+        @media only screen and (min-width:1310px) {
             width: 100%;
         }
         &_1 {

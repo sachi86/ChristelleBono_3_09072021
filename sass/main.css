@@ -573,6 +573,7 @@ main {
   }
   25% {
     margin-top: -80px;
+    opacity: 1;
     text-shadow: 0 0 0 #FF79DA;
   }
   50% {
@@ -597,6 +598,7 @@ main {
   }
   25% {
     margin-top: -80px;
+    opacity: 1;
     text-shadow: 0 0 0 #FF79DA;
   }
   50% {
@@ -631,6 +633,7 @@ main {
   }
   75% {
     margin-top: -30px;
+    opacity: 1;
     text-shadow: 0 0 0 #FF79DA;
   }
   100% {
@@ -655,6 +658,7 @@ main {
   }
   75% {
     margin-top: -30px;
+    opacity: 1;
     text-shadow: 0 0 0 #FF79DA;
   }
   100% {
@@ -912,7 +916,12 @@ main {
     width: 320px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1180px) {
+  .menu_dish_container {
+    width: 380px;
+  }
+}
+@media only screen and (min-width: 1310px) {
   .menu_dish_container {
     width: 100%;
   }
